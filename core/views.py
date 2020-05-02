@@ -1,8 +1,8 @@
-from django.contrib.auth.mixins import LoginRequireMixin
-from django.views.generic.base import TempalateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.base import TemplateView
 
-class IndexTemplateView(LoginRequireMixin, TemplateView):
+class IndexTemplateView(LoginRequiredMixin, TemplateView):
 
 	def get_template_names(self):
-		template_name = "index.htnl"
+		template_name = "index.html"
 		return template_name
